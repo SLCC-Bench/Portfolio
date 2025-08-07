@@ -55,7 +55,7 @@
         .card {
             border: none;
             border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12); /* Increased shadow for all cards */
             background: #fff;
         }
         .card-title {
@@ -534,6 +534,10 @@
             let isDragging = false;
             let startX = 0;
             let scrollLeft = 0;
+            let lastMoveTime = 0;
+            let lastMoveX = 0;
+            let velocity = 0;
+            let momentumId = null;
 
             // Clone items for seamless loop
             function cloneItems() {
@@ -570,6 +574,19 @@
             }
             animate();
 
+            function applyMomentum(v) {
+                if (Math.abs(v) < 0.1) return;
+                scrollWrap.scrollLeft -= v;
+                // Loop seamlessly
+                if (scrollWrap.scrollLeft < 0) {
+                    scrollWrap.scrollLeft = track.scrollWidth / 2 + scrollWrap.scrollLeft;
+                } else if (scrollWrap.scrollLeft >= track.scrollWidth / 2) {
+                    scrollWrap.scrollLeft = scrollWrap.scrollLeft - track.scrollWidth / 2;
+                }
+                v *= 0.93; // friction
+                momentumId = requestAnimationFrame(() => applyMomentum(v));
+            }
+
             // Remove pause on hover
             // scrollWrap.addEventListener('mouseenter', () => { isPaused = true; });
             // scrollWrap.addEventListener('mouseleave', () => { isPaused = false; });
@@ -581,17 +598,32 @@
                 startX = e.pageX - scrollWrap.offsetLeft;
                 scrollLeft = scrollWrap.scrollLeft;
                 scrollWrap.style.cursor = 'grabbing';
+                lastMoveTime = Date.now();
+                lastMoveX = e.pageX;
+                if (momentumId) cancelAnimationFrame(momentumId);
                 e.preventDefault();
             });
             scrollWrap.addEventListener('mouseleave', () => {
-                isDragging = false;
-                isPaused = false;
-                scrollWrap.style.cursor = 'grab';
+                if (isDragging) {
+                    isDragging = false;
+                    isPaused = false;
+                    scrollWrap.style.cursor = 'grab';
+                    // Momentum
+                    if (Math.abs(velocity) > 0.5) {
+                        applyMomentum(velocity);
+                    }
+                }
             });
             scrollWrap.addEventListener('mouseup', () => {
-                isDragging = false;
-                isPaused = false;
-                scrollWrap.style.cursor = 'grab';
+                if (isDragging) {
+                    isDragging = false;
+                    isPaused = false;
+                    scrollWrap.style.cursor = 'grab';
+                    // Momentum
+                    if (Math.abs(velocity) > 0.5) {
+                        applyMomentum(velocity);
+                    }
+                }
             });
             scrollWrap.addEventListener('mousemove', (e) => {
                 if (!isDragging) return;
@@ -605,20 +637,37 @@
                 } else if (scrollWrap.scrollLeft >= track.scrollWidth / 2) {
                     scrollWrap.scrollLeft = scrollWrap.scrollLeft - track.scrollWidth / 2;
                 }
+                // Calculate velocity
+                const now = Date.now();
+                velocity = (e.pageX - lastMoveX) / (now - lastMoveTime + 1) * 20;
+                lastMoveTime = now;
+                lastMoveX = e.pageX;
             });
 
             // Touch support
             let touchStartX = 0;
             let touchScrollLeft = 0;
+            let lastTouchMoveTime = 0;
+            let lastTouchMoveX = 0;
+            let touchVelocity = 0;
             scrollWrap.addEventListener('touchstart', (e) => {
                 isDragging = true;
                 isPaused = true;
                 touchStartX = e.touches[0].pageX;
                 touchScrollLeft = scrollWrap.scrollLeft;
+                lastTouchMoveTime = Date.now();
+                lastTouchMoveX = touchStartX;
+                if (momentumId) cancelAnimationFrame(momentumId);
             }, { passive: true });
             scrollWrap.addEventListener('touchend', () => {
-                isDragging = false;
-                isPaused = false;
+                if (isDragging) {
+                    isDragging = false;
+                    isPaused = false;
+                    // Momentum
+                    if (Math.abs(touchVelocity) > 0.5) {
+                        applyMomentum(touchVelocity);
+                    }
+                }
             }, { passive: true });
             scrollWrap.addEventListener('touchmove', (e) => {
                 if (!isDragging) return;
@@ -631,20 +680,17 @@
                 } else if (scrollWrap.scrollLeft >= track.scrollWidth / 2) {
                     scrollWrap.scrollLeft = scrollWrap.scrollLeft - track.scrollWidth / 2;
                 }
+                // Calculate velocity
+                const now = Date.now();
+                touchVelocity = (x - lastTouchMoveX) / (now - lastTouchMoveTime + 1) * 20;
+                lastTouchMoveTime = now;
+                lastTouchMoveX = x;
             }, { passive: false });
 
             // Responsive: recalculate on resize
             window.addEventListener('resize', () => {
                 setTrackWidth();
             });
-        })();
-        </script>
-        <!-- Infinite Autoplay Carousel End -->
-    </div>
-    <!-- Bootstrap JS Bundle (required for carousel) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
         })();
         </script>
         <!-- Infinite Autoplay Carousel End -->
