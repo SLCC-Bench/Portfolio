@@ -86,81 +86,340 @@
 </head>
 <body>
     <div class="container mt-5">
-        <div class="d-flex flex-column align-items-center mb-4">
-            <img src="{{ url_for('static', filename='images/Bench.png') }}" alt="Bengie Dulay" class="rounded-circle profile-img mb-3">
-            <h1 class="main-title">Bengie Dulay</h1>
-        </div>
-        <div class="bio-section">
-            <p>
-                I am a QA Tester with 6+ years of experience in Functional, Regression, Smoke, Sanity, and Mobile Testing (Android & iOS). Skilled in SQL Server, Firebase, Jira, and Azure DevOps, I create and execute test cases, manage test data, and perform bug tracking and verification. I have experience in Agile environments, regularly participating in sprint planning and retrospectives.
-            </p>
-            <p>
-                My background includes roles at Accenture (via Manpower), Eurolink, and YouSource Inc., where I led web and mobile testing efforts, handled client-reported issues, and gained hands-on experience in Selenium C# automation.
-            </p>
+        <div class="d-flex flex-wrap align-items-center justify-content-center mb-5" style="gap: 3rem;">
+            <div>
+                <img src="{{ url_for('static', filename='images/Bench.png') }}" alt="Bengie Dulay" class="rounded-circle" style="width:340px; height:340px; object-fit:cover; border: 4px solid #e0e0e0; box-shadow: 0 2px 12px rgba(0,0,0,0.07);">
+            </div>
+            <div>
+                <h1 class="main-title" style="font-size:2.8rem; font-weight:700; margin-bottom:0.5rem;">Bengie Dulay</h1>
+                <h2 style="font-size:1.25rem; font-weight:500; margin-bottom:1.2rem; color:#444;">A Bit About Me</h2>
+                <div style="max-width: 350px; color:#444; font-size:1.08rem;">
+                    <p style="margin-bottom:0.7em;">
+                        I am a QA Tester with 6+ years of experience in Functional, Regression, Smoke, Sanity, and Mobile Testing (Android & iOS).
+                    </p>
+                    <p style="margin-bottom:0.7em;">
+                        Skilled in SQL Server, Firebase, Jira, and Azure DevOps, I create and execute test cases, manage test data, and perform bug tracking and verification.
+                    </p>
+                    <p style="margin-bottom:0;">
+                        My background includes roles at Accenture (via Manpower), Eurolink, and YouSource Inc., where I led web and mobile testing efforts, handled client-reported issues, and gained hands-on experience in Selenium C# automation.
+                    </p>
+                </div>
+            </div>
         </div>
         <!-- Expertise Section -->
         <div class="mt-4">
             <h2 class="section-title text-center">Expertise</h2>
-            <ul class="list-group list-group-flush mx-auto" style="max-width: 400px;">
-                <li class="list-group-item">Functional Testing</li>
-                <li class="list-group-item">SQL Server and Firebase Database</li>
-                <li class="list-group-item">Regression Testing</li>
-                <li class="list-group-item">Android and iOS Mobile Testing</li>
-                <li class="list-group-item">Smoke Testing</li>
-                <li class="list-group-item">Mobile Testing</li>
-                <li class="list-group-item">Azure DevOps</li>
-                <li class="list-group-item">Jira</li>
-            </ul>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center d-none d-lg-flex">
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for Functional Testing -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">Functional Testing</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Ensuring software features work as intended by validating requirements and user flows through manual and automated tests.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for SQL Server and Firebase Database -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><ellipse cx="12" cy="7" rx="8" ry="3"/><path d="M4 7v10c0 1.66 3.58 3 8 3s8-1.34 8-3V7"/><path d="M4 17c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">SQL Server &amp; Firebase</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Skilled in managing, querying, and validating data using SQL Server and Firebase for robust test data and backend validation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for Regression Testing -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M1 20v-2a4 4 0 0 1 4-4h12"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">Regression Testing</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Verifying that new code changes do not adversely affect existing functionalities by executing comprehensive test suites.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for Android and iOS Mobile Testing -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">Android &amp; iOS Mobile Testing</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Testing mobile applications on Android and iOS devices to ensure seamless user experience and platform compatibility.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for Smoke Testing -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="7" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">Smoke Testing</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Performing initial checks to verify basic functionalities and system stability before proceeding to deeper testing phases.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for Mobile Testing -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">Mobile Testing</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Expertise in end-to-end testing of mobile apps, covering usability, performance, and device compatibility.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for Azure DevOps -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="3 11 12 2 21 11 12 20 3 11"/><path d="M12 2v20"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">Azure DevOps</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Proficient in using Azure DevOps for test management, bug tracking, and CI/CD integration in Agile teams.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex">
+                    <div class="card border-0 flex-fill text-center h-100">
+                        <div class="mx-auto my-3" style="font-size:3.5rem;">
+                            <span class="d-inline-block" style="color:#1a355e;">
+                                <!-- SVG icon for Jira -->
+                                <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                            </span>
+                        </div>
+                        <div class="card-body p-3">
+                            <h5 class="card-title mb-2" style="font-size:1.35rem;">Jira</h5>
+                            <p class="card-text mb-2" style="font-size:1.08rem;">Experienced in using Jira for agile project management, issue tracking, and test case documentation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile slider for Expertise -->
+            <div class="d-lg-none">
+                <div id="expertiseCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-touch="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for Functional Testing -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">Functional Testing</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Ensuring software features work as intended by validating requirements and user flows through manual and automated tests.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for SQL Server and Firebase Database -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><ellipse cx="12" cy="7" rx="8" ry="3"/><path d="M4 7v10c0 1.66 3.58 3 8 3s8-1.34 8-3V7"/><path d="M4 17c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">SQL Server &amp; Firebase</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Skilled in managing, querying, and validating data using SQL Server and Firebase for robust test data and backend validation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for Regression Testing -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M1 20v-2a4 4 0 0 1 4-4h12"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">Regression Testing</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Verifying that new code changes do not adversely affect existing functionalities by executing comprehensive test suites.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for Android and iOS Mobile Testing -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">Android &amp; iOS Mobile Testing</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Testing mobile applications on Android and iOS devices to ensure seamless user experience and platform compatibility.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for Smoke Testing -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="7" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">Smoke Testing</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Performing initial checks to verify basic functionalities and system stability before proceeding to deeper testing phases.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for Mobile Testing -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">Mobile Testing</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Expertise in end-to-end testing of mobile apps, covering usability, performance, and device compatibility.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for Azure DevOps -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="3 11 12 2 21 11 12 20 3 11"/><path d="M12 2v20"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">Azure DevOps</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Proficient in using Azure DevOps for test management, bug tracking, and CI/CD integration in Agile teams.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card border-0 text-center h-100 mx-3" style="min-width:270px; max-width:350px; min-height:350px; max-height:350px; margin-left:auto; margin-right:auto; display:flex; flex-direction:column;">
+                                <div class="mx-auto my-3" style="font-size:3.5rem;">
+                                    <span class="d-inline-block" style="color:#1a355e;">
+                                        <!-- SVG icon for Jira -->
+                                        <svg width="56" height="56" fill="none" stroke="#1a355e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+                                    </span>
+                                </div>
+                                <div class="card-body p-3">
+                                    <h5 class="card-title mb-2" style="font-size:1.35rem;">Jira</h5>
+                                    <p class="card-text mb-2" style="font-size:1.08rem;">Experienced in using Jira for agile project management, issue tracking, and test case documentation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Experiences Section -->
         <div class="mt-5">
             <h2 class="section-title text-center">Experiences</h2>
-            <div class="card mb-3 mx-auto" style="max-width: 700px;">
-                <div class="card-body">
-                    <h5 class="card-title mb-1">AASE Functional Tester - Manpower Group <span class="text-muted" style="font-size:0.9em;">(Deployed in Accenture)</span></h5>
-                    <div class="mb-2 text-muted" style="font-size:0.95em;">Apr 2019 – Jan 2020</div>
-                    <ul>
-                        <li>Create Test Data for Hospital Records</li>
-                        <li>Create Test Cases</li>
-                        <li>Perform Functional Testing</li>
-                        <li>Perform Black-box Testing</li>
-                        <li>Use Jira for Bug Filing and Verification</li>
-                        <li>Occasionally perform Regression testing</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card mb-3 mx-auto" style="max-width: 700px;">
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Quality Assurance Analyst - Eurolink Network International Corporation</h5>
-                    <div class="mb-2 text-muted" style="font-size:0.95em;">Jan 2020 – April 2022</div>
-                    <ul>
-                        <li>Can create Test Data, Test Suite and Test Cases</li>
-                        <li>Perform Functional, Non-Functional, Regression, Smoke, White and Black-box, and Sanity Testing</li>
-                        <li>Perform Sprint Planning, Sprint Retrospective and Scrums</li>
-                        <li>Can log Bugs and Tasks in Azure DevOps</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card mb-3 mx-auto" style="max-width: 700px;">
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Mid QA Engineer - YouSource Inc.</h5>
-                    <div class="mb-2 text-muted" style="font-size:0.95em;">April 2022 - Present</div>
-                    <ul>
-                        <li>Perform Sprint Planning, Sprint Retrospective and Scrums</li>
-                        <li>Bug Filing in Azure DevOps</li>
-                        <li>Can create Test Data, Test Suite and Test Cases</li>
-                        <li>Perform Functional, Regression, Smoke and Sanity Testing</li>
-                        <li>Perform L10 and do individual and division rock</li>
-                        <li>Compliance testing with client</li>
-                        <li>Create incident report reported by the client</li>
-                        <li>1 month hands on experience on writing Selenium C# Automation Script</li>
-                        <li>Bug Verification in Azure DevOps</li>
-                        <li>Bug Filing in Jira</li>
-                        <li>Bug Verification in Jira</li>
-                        <li>Android and iOS Mobile Testing</li>
-                        <li>Use of TestFlight in iOS Testing</li>
-                        <li>Web Testing</li>
-                    </ul>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body d-flex flex-column flex-md-row align-items-center align-items-md-start" style="padding:2rem;">
+                            <div class="d-flex flex-column align-items-center justify-content-center flex-shrink-0 mb-3 mb-md-0" style="min-width:110px; max-width:110px;">
+                                <a href="https://www.manpowergroup.com/en" target="_blank" rel="noopener">
+                                    <img src="{{ url_for('static', filename='images/manpowergrouplogo.png') }}" alt="Manpower Group Logo" style="height:70px; width:auto; object-fit:contain; margin-bottom:10px; max-width:100%;">
+                                </a>
+                                <a href="https://www.accenture.com/ph-en" target="_blank" rel="noopener">
+                                    <img src="{{ url_for('static', filename='images/accenturelogo.png') }}" alt="Accenture Logo" style="height:70px; width:auto; object-fit:contain; max-width:100%;">
+                                </a>
+                            </div>
+                            <div class="ms-md-4 w-100">
+                                <h5 class="card-title mb-1" style="font-size:1.2rem;">AASE Functional Tester - Manpower Group <span class="text-muted" style="font-size:0.95em;">(Deployed in Accenture)</span></h5>
+                                <div class="mb-2 text-muted" style="font-size:0.98em;">Apr 2019 – Jan 2020</div>
+                                <ul class="mb-0 ps-3" style="font-size:1.05rem;">
+                                    <li>Create Test Data for Hospital Records</li>
+                                    <li>Create Test Cases</li>
+                                    <li>Perform Functional Testing</li>
+                                    <li>Perform Black-box Testing</li>
+                                    <li>Use Jira for Bug Filing and Verification</li>
+                                    <li>Occasionally perform Regression testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body d-flex flex-column flex-md-row align-items-center align-items-md-start" style="padding:2rem;">
+                            <div class="d-flex flex-column align-items-center justify-content-center flex-shrink-0 mb-3 mb-md-0" style="min-width:110px; max-width:110px;">
+                                <a href="https://www.eurolinkonline.com/" target="_blank" rel="noopener">
+                                    <img src="{{ url_for('static', filename='images/eurolinklogo.png') }}" alt="Eurolink Logo" style="height:140px; width:auto; object-fit:contain; max-width:100%;">
+                                </a>
+                            </div>
+                            <div class="ms-md-4 w-100">
+                                <h5 class="card-title mb-1" style="font-size:1.2rem;">Quality Assurance Analyst - Eurolink Network International Corporation</h5>
+                                <div class="mb-2 text-muted" style="font-size:0.98em;">Jan 2020 – April 2022</div>
+                                <ul class="mb-0 ps-3" style="font-size:1.05rem;">
+                                    <li>Can create Test Data, Test Suite and Test Cases</li>
+                                    <li>Perform Functional, Non-Functional, Regression, Smoke, White and Black-box, and Sanity Testing</li>
+                                    <li>Perform Sprint Planning, Sprint Retrospective and Scrums</li>
+                                    <li>Can log Bugs and Tasks in Azure DevOps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body d-flex flex-column flex-md-row align-items-center align-items-md-start" style="padding:2rem;">
+                            <div class="d-flex flex-column align-items-center justify-content-center flex-shrink-0 mb-3 mb-md-0" style="min-width:110px; max-width:110px;">
+                                <a href="https://www.you-source.com/" target="_blank" rel="noopener">
+                                    <img src="{{ url_for('static', filename='images/yousourcelogo.png') }}" alt="YouSource Logo" style="height:140px; width:auto; object-fit:contain; max-width:100%;">
+                                </a>
+                            </div>
+                            <div class="ms-md-4 w-100">
+                                <h5 class="card-title mb-1" style="font-size:1.2rem;">Mid QA Engineer - YouSource Inc.</h5>
+                                <div class="mb-2 text-muted" style="font-size:0.98em;">April 2022 - Present</div>
+                                <ul class="mb-0 ps-3" style="font-size:1.05rem;">
+                                    <li>Perform Sprint Planning, Sprint Retrospective and Scrums</li>
+                                    <li>Bug Filing in Azure DevOps</li>
+                                    <li>Can create Test Data, Test Suite and Test Cases</li>
+                                    <li>Perform Functional, Regression, Smoke and Sanity Testing</li>
+                                    <li>Perform L10 and do individual and division rock</li>
+                                    <li>Compliance testing with client</li>
+                                    <li>Create incident report reported by the client</li>
+                                    <li>1 month hands on experience on writing Selenium C# Automation Script</li>
+                                    <li>Bug Verification in Azure DevOps</li>
+                                    <li>Bug Filing in Jira</li>
+                                    <li>Bug Verification in Jira</li>
+                                    <li>Android and iOS Mobile Testing</li>
+                                    <li>Use of TestFlight in iOS Testing</li>
+                                    <li>Web Testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -378,6 +637,14 @@
             window.addEventListener('resize', () => {
                 setTrackWidth();
             });
+        })();
+        </script>
+        <!-- Infinite Autoplay Carousel End -->
+    </div>
+    <!-- Bootstrap JS Bundle (required for carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
         })();
         </script>
         <!-- Infinite Autoplay Carousel End -->
